@@ -1,17 +1,18 @@
-Partner:
+Partner: Maribel
 
 What Went Well
----
+Communication
 
 
 What Would Make Next Time 1% Better
----
+In depth definition
 * Focus:
-
+Working together to productively complete the task
 * Communication:
-
+Effective
 * Pacing:
-
+Could be better next time
 * Division of responsibility
-
+Equally split
 * Code quality:
+Sufficient
