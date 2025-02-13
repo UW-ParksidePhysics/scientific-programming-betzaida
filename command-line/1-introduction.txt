@@ -1,1 +1,21 @@
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(.venv) grnq61-101:scientific-programming-betzaida alcai001$ pwd
+/Volumes/Home/Student/a/alcai001/scientific-programming-betzaida
+(.venv) grnq61-101:scientific-programming-betzaida alcai001$ ls -la
+total 209
+drwx------@ 1 alcai001  UWP\Domain Users  16384 Feb 13 08:40 .
+drwx------+ 1 alcai001  UWP\Domain Users  16384 Feb 11 09:10 ..
+-rwx------@ 1 alcai001  UWP\Domain Users   6148 Feb 13 08:41 .DS_Store
+drwx------@ 1 alcai001  UWP\Domain Users  16384 Feb 11 09:10 .git
+drwx------@ 1 alcai001  UWP\Domain Users  16384 Feb 11 09:26 .idea
+-rwx------@ 1 alcai001  UWP\Domain Users    120 Feb 11 09:10 README.md
+drwx------@ 1 alcai001  UWP\Domain Users  16384 Feb 11 09:10 command-line
+drwx------@ 1 alcai001  UWP\Domain Users  16384 Feb 11 09:10 python
+(.venv) grnq61-101:scientific-programming-betzaida alcai001$ cd ~
+(.venv) grnq61-101:~ alcai001$ pwd
+/Users/alcai001
+(.venv) grnq61-101:~ alcai001$
+
