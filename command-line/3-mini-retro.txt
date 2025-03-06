@@ -15,4 +15,4 @@ I think i might have gone a bit too fast which is I think i had issues
 * Division of responsibility
 I did everything by myself since I had to partner
 * Code quality:
-I think that my code was okay, it could have been better since I think I did something wrong along the way
+I think that my code was okay, it could have been better since I think I did something wrong along the way.
