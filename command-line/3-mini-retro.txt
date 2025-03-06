@@ -1,17 +1,18 @@
-Partner:
+Partner: N/A (worked by myself)
 
 What Went Well
----
+I think that something that went well was doing the challenge portion of the command line assignment
 
 
 What Would Make Next Time 1% Better
----
+Reading thoroughly
 * Focus:
-
+I was focused on only the assignment
 * Communication:
-
+Communication was okay, I asked myself questions to understand what was happening
 * Pacing:
-
+I think i might have gone a bit too fast which is I think i had issues
 * Division of responsibility
-
+I did everything by myself since I had to partner
 * Code quality:
+I think that my code was okay, it could have been better since I think I did something wrong along the way
