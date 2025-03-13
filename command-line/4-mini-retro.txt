@@ -1,17 +1,18 @@
-Partner:
+Partner: Ashton
 
 What Went Well
----
+communication and teamwork
 
 
 What Would Make Next Time 1% Better
----
+n/a, i think it went well
 * Focus:
-
+it was great
 * Communication:
-
+clear
 * Pacing:
-
+fast and smooth
 * Division of responsibility
-
+split equally
 * Code quality:
+pretty good
