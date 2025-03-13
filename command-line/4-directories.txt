@@ -1,1 +1,15 @@
-
+betzaidaalcaide@Mac documents % cd documents
+cd: no such file or directory: documents
+betzaidaalcaide@Mac documents % mkdir lesson4-practice          
+betzaidaalcaide@Mac documents % mkdir -p lesson4-practice/data/2025
+betzaidaalcaide@Mac documents % cd documents
+cd: no such file or directory: documents
+betzaidaalcaide@Mac documents % find lesson4-practice
+lesson4-practice
+lesson4-practice/data
+lesson4-practice/data/2025
+betzaidaalcaide@Mac documents % find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/data
+lesson4-practice/data/2025
+betzaidaalcaide@Mac documents % rmdir lesson4-practice/data/2025
