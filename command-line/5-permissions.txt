@@ -1,1 +1,70 @@
+Last login: Wed Mar  5 21:11:57 on ttys000
+betzaidaalcaide@Betzys-MacBook-Air ~ % touch notes.txt
+betzaidaalcaide@Betzys-MacBook-Air ~ % ls -l notes.txt
+-rw-r--r--@ 1 betzaidaalcaide  staff  0 Mar 20 09:04 notes.txt
+betzaidaalcaide@Betzys-MacBook-Air ~ % chmod u+x notes.txt
+betzaidaalcaide@Betzys-MacBook-Air ~ % chmod o-r notes.txt
+betzaidaalcaide@Betzys-MacBook-Air ~ % ls -l
+total 8024
+-rw-r--r--@   1 betzaidaalcaide  staff        0 Mar  5 20:57 3-files.txt
+drwx------@   5 betzaidaalcaide  staff      160 Jul 19  2024 Applications
+-rw-r--r--@   1 betzaidaalcaide  staff   411518 Oct  5 14:11 Budget planner canva 1.html
+drwx------@  82 betzaidaalcaide  staff     2624 Oct  5 14:11 Budget planner canva 1_files
+drwx------+   6 betzaidaalcaide  staff      192 Mar 18 21:20 Desktop
+drwx------+  16 betzaidaalcaide  staff      512 Mar 16 16:10 Documents
+drwx------+  37 betzaidaalcaide  staff     1184 Mar 17 01:45 Downloads
+-rw-r--r--@   1 betzaidaalcaide  staff      698 Jul 19  2024 Ethos, Pathos, Logos.txt
+drwx------@ 103 betzaidaalcaide  staff     3296 Mar  3 11:52 Library
+drwx------    5 betzaidaalcaide  staff      160 Jul 19  2024 Movies
+drwx------+   7 betzaidaalcaide  staff      224 Jul 19  2024 Music
+-rw-r--r--@   1 betzaidaalcaide  staff     4515 Sep 23 18:48 OG PAY STUD 9:11:24.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff     4324 Sep 23 18:48 OG PAY STUF 9:4:24.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff     4532 Sep 23 18:48 OG PAYSTUD 8:28:24.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff     4467 Sep 23 18:47 OG paystud 9:18:24.pdf
+drwx------+   6 betzaidaalcaide  staff      192 Jul 19  2024 Pictures
+drwxr-xr-x+   4 betzaidaalcaide  staff      128 Nov 13  2023 Public
+drwxr-xr-x@   5 betzaidaalcaide  staff      160 Feb 25 11:45 PycharmProjects
+-rw-r--r--@   1 betzaidaalcaide  staff   173660 Nov 18  2023 UW-Park to UW-Mil Mech Eng Transfer.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff       49 Mar  5 19:56 backup_example.txt
+-rw-r--r--@   1 betzaidaalcaide  staff       46 Mar  5 21:04 example.txt
+drwxr-xr-x    2 betzaidaalcaide  staff       64 Mar 13 08:59 lesson4-practice
+-rw-r--r--@   1 betzaidaalcaide  staff       49 Feb 25 12:17 new_example.txt
+-rwxr-----@   1 betzaidaalcaide  staff        0 Mar 20 09:04 notes.txt
+-rw-r--r--@   1 betzaidaalcaide  staff  3466609 Jul 19  2024 wallpaper 1.pdf
+betzaidaalcaide@Betzys-MacBook-Air ~ % rm notes.txt
+betzaidaalcaide@Betzys-MacBook-Air ~ % sudo chown :new_user example.txt
+Password:
+Sorry, try again.
+Password:
+chown: new_user: illegal group name
+betzaidaalcaide@Betzys-MacBook-Air ~ % sudo chown :new_group example.txt
+chown: new_group: illegal group name
+betzaidaalcaide@Betzys-MacBook-Air ~ % echo '#!/bin/sh\necho "Hello, world!" > script.sh
+quote> ./script.sh
+quote> chmod 755 script.sh
+quote> ls -l script.sh
+quote> ./script.sh
+quote> 
+quote> 
+betzaidaalcaide@Betzys-MacBook-Air ~ % echo "#!/bin/sh\necho \"Hello, world!\"" > script.sh
+zsh: event not found: /bin/sh\necho
+betzaidaalcaide@Betzys-MacBook-Air ~ % printf '#!/bin/sh\necho "Hello, world!"\n' > script.sh
+betzaidaalcaide@Betzys-MacBook-Air ~ % chmod 755 script.sh
+betzaidaalcaide@Betzys-MacBook-Air ~ % ./script.sh
+Hello, world!
+betzaidaalcaide@Betzys-MacBook-Air ~ % rm script.sh
+betzaidaalcaide@Betzys-MacBook-Air ~ % ls
+3-files.txt				OG PAY STUF 9:4:24.pdf
+Applications				OG PAYSTUD 8:28:24.pdf
+Budget planner canva 1.html		OG paystud 9:18:24.pdf
+Budget planner canva 1_files		Pictures
+Desktop					Public
+Documents				PycharmProjects
+Downloads				UW-Park to UW-Mil Mech Eng Transfer.pdf
+Ethos, Pathos, Logos.txt		backup_example.txt
+Library					example.txt
+Movies					lesson4-practice
+Music					new_example.txt
+OG PAY STUD 9:11:24.pdf			wallpaper 1.pdf
+betzaidaalcaide@Betzys-MacBook-Air ~ % 
 
