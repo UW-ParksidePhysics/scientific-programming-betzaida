@@ -1,4 +1,49 @@
-#### RENAME from project.py to (your_project_short_name).py
+""" My code is going to produce different spin icons based on the planets in the solar system
+"""
+
+__author__ = ["Betzaida Alcaide", "Maribel Moreno"]
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def test_plot():
+
+    #line
+    intercepts = [4, 3]
+    x_bounds = np.array([-3, 8])
+    x_values = np.linspace(x_bounds[0], x_bounds[1], 100)
+    #y_bounds = -intercepts[1] * x_bounds / intercepts[0] + intercepts[1]
+    y_values = -intercepts[1] * x_values / intercepts[0] + intercepts[1]
+
+    #circle
+    radius = intercepts[0]
+    angles = np.linspace( 0, 2 * np.pi, 100)
+    circle_xs = radius * np.cos(angles)
+    circle_ys = radius * np.sin(angles)
+    #plt.plot(x_bounds, y_bounds)
+    plt.plot(x_values, y_values)
+    plt.plot(circle_xs, circle_ys)
+    plt.show()
+
+    return
+
+if __name__ == '__main__':
+    test_plot()
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### RENAME from spin_icons.py to (your_project_short_name).py
 # File structure
 # 1. Commented paragraph describing project ~ 100-200 words
 # 2. Module imports that are used in multiple functions

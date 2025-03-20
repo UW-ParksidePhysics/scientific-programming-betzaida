@@ -1,17 +1,18 @@
-Partner:
+Partner: Maribel
 
 What Went Well
 ---
-
+We got my terminal to work great
 
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+We were both focused
 * Communication:
-
+Clear and open communication when we were stuck on a problem
 * Pacing:
-
+Great speed
 * Division of responsibility
-
+Was split 50-50
 * Code quality:
+I think our code was a little messy but after solving the issue it turned out nice
