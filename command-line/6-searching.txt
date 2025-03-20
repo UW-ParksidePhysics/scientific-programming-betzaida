@@ -1,1 +1,201 @@
-
+Last login: Thu Mar 20 09:04:27 on ttys000
+betzaidaalcaide@Betzys-MacBook-Air ~ % find. -name"ball.py"
+zsh: command not found: find.
+betzaidaalcaide@Betzys-MacBook-Air ~ % ~
+zsh: permission denied: /Users/betzaidaalcaide
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd ~
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd ~/Documents/scientific-repository
+cd: no such file or directory: /Users/betzaidaalcaide/Documents/scientific-repository
+betzaidaalcaide@Betzys-MacBook-Air ~ % ls -l ~
+total 8024
+-rw-r--r--@   1 betzaidaalcaide  staff        0 Mar  5 20:57 3-files.txt
+drwx------@   5 betzaidaalcaide  staff      160 Jul 19  2024 Applications
+-rw-r--r--@   1 betzaidaalcaide  staff   411518 Oct  5 14:11 Budget planner canva 1.html
+drwx------@  82 betzaidaalcaide  staff     2624 Oct  5 14:11 Budget planner canva 1_files
+drwx------+  12 betzaidaalcaide  staff      384 Mar 20 09:46 Desktop
+drwx------+  16 betzaidaalcaide  staff      512 Mar 16 16:10 Documents
+drwx------+  37 betzaidaalcaide  staff     1184 Mar 17 01:45 Downloads
+-rw-r--r--@   1 betzaidaalcaide  staff      698 Jul 19  2024 Ethos, Pathos, Logos.txt
+drwx------@ 103 betzaidaalcaide  staff     3296 Mar  3 11:52 Library
+drwx------    5 betzaidaalcaide  staff      160 Jul 19  2024 Movies
+drwx------+   7 betzaidaalcaide  staff      224 Jul 19  2024 Music
+-rw-r--r--@   1 betzaidaalcaide  staff     4515 Sep 23 18:48 OG PAY STUD 9:11:24.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff     4324 Sep 23 18:48 OG PAY STUF 9:4:24.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff     4532 Sep 23 18:48 OG PAYSTUD 8:28:24.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff     4467 Sep 23 18:47 OG paystud 9:18:24.pdf
+drwx------+   6 betzaidaalcaide  staff      192 Jul 19  2024 Pictures
+drwxr-xr-x+   4 betzaidaalcaide  staff      128 Nov 13  2023 Public
+drwxr-xr-x@   5 betzaidaalcaide  staff      160 Feb 25 11:45 PycharmProjects
+-rw-r--r--@   1 betzaidaalcaide  staff   173660 Nov 18  2023 UW-Park to UW-Mil Mech Eng Transfer.pdf
+-rw-r--r--@   1 betzaidaalcaide  staff       49 Mar  5 19:56 backup_example.txt
+-rw-r--r--@   1 betzaidaalcaide  staff       46 Mar  5 21:04 example.txt
+drwxr-xr-x    2 betzaidaalcaide  staff       64 Mar 13 08:59 lesson4-practice
+-rw-r--r--@   1 betzaidaalcaide  staff       49 Feb 25 12:17 new_example.txt
+-rw-r--r--@   1 betzaidaalcaide  staff  3466609 Jul 19  2024 wallpaper 1.pdf
+betzaidaalcaide@Betzys-MacBook-Air ~ % rm ~
+rm: /Users/betzaidaalcaide: is a directory
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd ~
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd ~/Desktop
+betzaidaalcaide@Betzys-MacBook-Air Desktop % git clone https://github.com/UW-ParksidePhysics/scientific-programming-betzaida
+Cloning into 'scientific-programming-betzaida'...
+remote: Enumerating objects: 119, done.
+remote: Counting objects: 100% (119/119), done.
+remote: Compressing objects: 100% (80/80), done.
+remote: Total 119 (delta 47), reused 83 (delta 29), pack-reused 0 (from 0)
+Receiving objects: 100% (119/119), 23.41 KiB | 2.60 MiB/s, done.
+Resolving deltas: 100% (47/47), done.
+betzaidaalcaide@Betzys-MacBook-Air Desktop % cd scientific-repository
+cd: no such file or directory: scientific-repository
+betzaidaalcaide@Betzys-MacBook-Air Desktop % cd scientific-programming-betzaida
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % find . -name "ball.py"
+./python/vpython/ball.py
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./physics/simulations/ball.py
+zsh: no such file or directory: ./physics/simulations/ball.py
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cd ./python/vpyhton
+cd: no such file or directory: ./python/vpyhton
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ls python
+array-computing
+computing-with-formulas
+dictionaries-and-strings
+functions-and-branching
+loops-and-lists
+matrices
+project
+sum_integers.py
+table_temperature_conversion_and_approximation.py
+user-input
+vpython
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cd python/vpython
+betzaidaalcaide@Betzys-MacBook-Air vpython % ls
+CONCEPTS.md			projectile_motion_comparison.py
+ball.py				two_balls_bounce.py
+birthday_station.py		two_balls_cross.py
+birthday_vector.py
+betzaidaalcaide@Betzys-MacBook-Air vpython % grep "vpython" ball.py
+from vpython import *
+betzaidaalcaide@Betzys-MacBook-Air vpython % cd ../../
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % pwd
+/Users/betzaidaalcaide/Desktop/scientific-programming-betzaida
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % find . -mtime -3
+.
+./table_vertical_projectile_positions.py
+./python
+./python/functions-and-branching
+./python/functions-and-branching/CONCEPTS.md
+./python/array-computing
+./python/array-computing/CONCEPTS.md
+./python/vpython
+./python/vpython/birthday_station.py
+./python/vpython/CONCEPTS.md
+./python/vpython/two_balls_cross.py
+./python/vpython/two_balls_bounce.py
+./python/vpython/projectile_motion_comparison.py
+./python/vpython/ball.py
+./python/vpython/birthday_vector.py
+./python/user-input
+./python/user-input/CONCEPTS.md
+./python/project
+./python/project/spin_icons.py
+./python/dictionaries-and-strings
+./python/dictionaries-and-strings/CONCEPTS.md
+./python/table_temperature_conversion_and_approximation.py
+./python/loops-and-lists
+./python/loops-and-lists/CONCEPTS.md
+./python/computing-with-formulas
+./python/computing-with-formulas/CONCEPTS.md
+./python/sum_integers.py
+./python/matrices
+./python/matrices/fifth_eigenvector.py
+./python/matrices/tenth_eigenvector.py
+./freefall.py
+./matrix_practice.py
+./README.md
+./command-line
+./command-line/2-CONCEPTS.md
+./command-line/2-editing.txt
+./command-line/7-CONCEPTS.md
+./command-line/1-introduction.txt
+./command-line/10-CONCEPTS.md
+./command-line/4-CONCEPTS.md
+./command-line/8-CONCEPTS.md
+./command-line/8-redirection.txt
+./command-line/5-permissions.txt
+./command-line/4-directories.txt
+./command-line/10-mini-retro.txt
+./command-line/1-CONCEPTS.md
+./command-line/9-mini-retro.txt
+./command-line/1-mini-retro.txt
+./command-line/6-CONCEPTS.md
+./command-line/6-mini-retro.txt
+./command-line/9-vi.txt
+./command-line/7-mini-retro.txt
+./command-line/3-CONCEPTS.md
+./command-line/8-mini-retro.txt
+./command-line/7-processes.txt
+./command-line/2-mini-retro.txt
+./command-line/6-searching.txt
+./command-line/9-CONCEPTS.md
+./command-line/5-mini-retro.txt
+./command-line/4-mini-retro.txt
+./command-line/5-CONCEPTS.md
+./command-line/3-files.txt
+./command-line/3-mini-retro.txt
+./table_temperature_conversion_with_while.py
+./hammer_drop_on_moon.py
+./.git
+./.git/config
+./.git/objects
+./.git/objects/pack
+./.git/objects/pack/pack-615452307ae9a0e4d5e84060bb21d9bd667b8f9a.pack
+./.git/objects/pack/pack-615452307ae9a0e4d5e84060bb21d9bd667b8f9a.idx
+./.git/objects/info
+./.git/HEAD
+./.git/info
+./.git/info/exclude
+./.git/logs
+./.git/logs/HEAD
+./.git/logs/refs
+./.git/logs/refs/heads
+./.git/logs/refs/heads/main
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/origin
+./.git/logs/refs/remotes/origin/HEAD
+./.git/description
+./.git/hooks
+./.git/hooks/commit-msg.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/update.sample
+./.git/hooks/push-to-checkout.sample
+./.git/refs
+./.git/refs/heads
+./.git/refs/heads/main
+./.git/refs/tags
+./.git/refs/remotes
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/HEAD
+./.git/index
+./.git/packed-refs
+./generate_coordinate_grid.py
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cd python
+betzaidaalcaide@Betzys-MacBook-Air python % touch test1.py test2.py
+betzaidaalcaide@Betzys-MacBook-Air python % vi test1.py
+betzaidaalcaide@Betzys-MacBook-Air python % vi test2.py
+betzaidaalcaide@Betzys-MacBook-Air python % grep "import numpy" *.py
+test1.py:import numpy as np
+test2.py:import numpy as np
+betzaidaalcaide@Betzys-MacBook-Air python % find . -name "*.py" -exec grep "import numpy" {} +
+./test1.py:import numpy as np
+./vpython/ball.py:import numpy as np
+./test2.py:import numpy as np
+./project/spin_icons.py:import numpy as np
+betzaidaalcaide@Betzys-MacBook-Air python % rm test1.py test2.py
+betzaidaalcaide@Betzys-MacBook-Air python % 
