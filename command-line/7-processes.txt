@@ -1,1 +1,42 @@
-
+Last login: Tue Apr 15 18:56:11 on ttys000
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd ~/Desktop/scientific-programming-betzaida/command-line
+betzaidaalcaide@Betzys-MacBook-Air command-line % pwd
+/Users/betzaidaalcaide/Desktop/scientific-programming-betzaida/command-line
+betzaidaalcaide@Betzys-MacBook-Air command-line % ping google.com &
+[1] 27465
+betzaidaalcaide@Betzys-MacBook-Air command-line % PING google.com (64.233.185.100): 56 data bytes
+64 bytes from 64.233.185.100: icmp_seq=0 ttl=53 time=29.018 ms
+64 bytes from 64.233.185.100: icmp_seq=1 ttl=53 time=31.063 ms
+64 bytes from 64.233.185.100: icmp_seq=2 ttl=53 time=28.087 ms
+p64 bytes from 64.233.185.100: icmp_seq=3 ttl=53 time=31.797 ms
+ps
+  PID TTY           TIME CMD
+27442 ttys000    0:00.02 -zsh
+27465 ttys000    0:00.01 ping google.com
+26932 ttys001    0:00.05 -zsh
+betzaidaalcaide@Betzys-MacBook-Air command-line % 64 bytes from 64.233.185.100: icmp_seq=4 ttl=53 time=30.131 ms
+64 bytes from 64.233.185.100: icmp_seq=5 ttl=53 time=28.455 ms
+64 bytes from 64.233.185.100: icmp_seq=6 ttl=53 time=31.893 ms
+64 bytes from 64.233.185.100: icmp_seq=7 ttl=53 time=47.186 ms
+64 bytes from 64.233.185.100: icmp_seq=8 ttl=53 time=92.104 ms
+64 bytes from 64.233.185.100: icmp_seq=9 ttl=53 time=108.826 ms
+Request timeout for icmp_seq 10
+64 bytes from 64.233.185.100: icmp_seq=11 ttl=53 time=28.152 ms
+64 bytes from 64.233.185.100: icmp_seq=12 ttl=53 time=33.171 ms
+64 bytes from 64.233.185.100: icmp_seq=13 ttl=53 time=30.034 ms
+64 bytes from 64.233.185.100: icmp_seq=14 ttl=53 time=32.952 ms
+64 bytes from 64.233.185.100: icmp_seq=15 ttl=53 time=30.465 ms
+64 bytes from 64.233.185.100: icmp_seq=16 ttl=53 time=28.933 ms
+64 bytes from 64.233.185.100: icmp_seq=17 ttl=53 time=28.988 ms
+64 bytes from 64.233.185.100: icmp_seq=18 ttl=53 time=29.609 ms
+64 bytes from 64.233.185.100: icmp_seq=19 ttl=53 time=54.249 ms
+64 bytes from 64.233.185.100: icmp_seq=20 ttl=53 time=99.940 ms
+64 bytes from 64.233.185.100: icmp_seq=21 ttl=53 time=29.233 ms
+ki64 bytes from 64.233.185.100: icmp_seq=22 ttl=53 time=28.257 ms
+ll 264 bytes from 64.233.185.100: icmp_seq=23 ttl=53 time=28.681 ms
+74664 bytes from 64.233.185.100: icmp_seq=24 ttl=53 time=28.223 ms
+5
+[1]  + terminated  ping google.com                                              
+betzaidaalcaide@Betzys-MacBook-Air command-line % top
+betzaidaalcaide@Betzys-MacBook-Air command-line % 
+betzaidaalcaide@Betzys-MacBook-Air command-line % 
