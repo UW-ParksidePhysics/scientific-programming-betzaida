@@ -1,1 +1,44 @@
+Last login: Tue Apr 15 18:59:04 on ttys000
+maribelmoreno@Maribels-MacBook-Air ~ % cd ~/Desktop
+ls
 
+Maribel Moreno - Resume .pdf		Screenshot 2025-04-15 at 6.57.58 PM.png
+Screenshot 2025-04-15 at 6.56.52 PM.png	command-line-practice
+maribelmoreno@Maribels-MacBook-Air Desktop % cd ~/Desktop/command-line-practice
+
+maribelmoreno@Maribels-MacBook-Air command-line-practice % script 8-redirect.txt
+
+Script started, output file is 8-redirect.txt
+maribelmoreno@Maribels-MacBook-Air command-line-practice % script 8-redirect.txt
+
+Script started, output file is 8-redirect.txt
+maribelmoreno@Maribels-MacBook-Air command-line-practice % script 8-redirect.txt
+
+Script started, output file is 8-redirect.txt
+maribelmoreno@Maribels-MacBook-Air command-line-practice % cat greeting.txt
+
+cat: greeting.txt: No such file or directory
+maribelmoreno@Maribels-MacBook-Air command-line-practice % echo "Welcome to Lesson 8!" > greeting.txt
+echo "Let's learn about redirection." >> greeting.txt
+cat greeting.txt
+rm greeting.txt
+
+quote> echo "File 1" > list.txt
+echo "File 2" >> list.txt
+rm list.txt
+
+quote> echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit." > data.txt
+wc -w data.txt > word_count.txt
+cat word_count.txt
+ls > directory_list.txt
+date >> directory_list.txt
+rm data.txt word_count.txt directory_list.txt
+
+quote> exit
+
+quote> maribelmoreno@Maribels-MacBook-Air command-line-practice %
+
+quote> exit
+quote> nano 8-CONCEPTS.md
+
+quote>
