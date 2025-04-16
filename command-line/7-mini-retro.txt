@@ -1,4 +1,4 @@
-Partner:
+Partner: Maribel
 
 What Went Well
 ---
@@ -7,11 +7,12 @@ What Went Well
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+10/10 did great
 * Communication:
-
+clear and effectively
 * Pacing:
-
+took our time, but did good
 * Division of responsibility
-
+split evenly
 * Code quality:
+i think our code was good
