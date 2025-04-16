@@ -1,1 +1,20 @@
+Last login: Tue Apr 15 19:23:19 on ttys000
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd ~/Desktop/scientific-programming-betzaida/command-line
+betzaidaalcaide@Betzys-MacBook-Air command-line % vi text.txt
+betzaidaalcaide@Betzys-MacBook-Air command-line % vi test.py
+betzaidaalcaide@Betzys-MacBook-Air command-line % cat test.py
+def print_message():
+    print("Hello from the function!")
 
+def calculate_area(length, width):
+    return length * width
+
+if __name__ == '__main__':
+    print_message()
+    area = calculate_area(5, 3)
+    print("Area:", area)
+betzaidaalcaide@Betzys-MacBook-Air command-line % vi test.py
+betzaidaalcaide@Betzys-MacBook-Air command-line % python3 test.py
+Hello from the function!
+Area: 15
+betzaidaalcaide@Betzys-MacBook-Air command-line %
