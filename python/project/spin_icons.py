@@ -6,6 +6,35 @@ __author__ = ["Betzaida Alcaide", "Maribel Moreno"]
 import numpy as np
 import matplotlib.pyplot as plt
 
+def label_icon():
+    pass
+
+
+def draw_planet():
+    pass
+
+
+def draw_poles():
+    pass
+
+
+def draw_orbit():
+    pass
+
+
+def draw_perpendicular_axis():
+    pass
+
+
+def get_data():
+    planet_data = {
+        'mars': 25.2,
+        'earth': 23.44,
+        'pluto':
+    }
+    return planet_data
+
+
 
 def test_plot():
 
@@ -29,6 +58,9 @@ def test_plot():
     return
 
 if __name__ == '__main__':
+    data = get_data()
+    for planet, tilt in data.items():
+        print(f"{planet} = {tilt}°")
     test_plot()
 
 
