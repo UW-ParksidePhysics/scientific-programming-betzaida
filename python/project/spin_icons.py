@@ -1,4 +1,13 @@
 """ My code is going to produce different spin icons based on the planets in the solar system
+feedback:
+-make a 1.5x 1.5 in version and a 3 x 3 in version
+-make a black and white version and color version
+-dont include the rotational period
+-indicate the planets orbit and the perpendicular from which the planetary tilt is measured
+-indicate the rotational direction using a curved arrow around the equator
+-mark the arc of swept out angle between perp the orbit and the pole, and label the angle there
+-include digits to the tenth of the degree (ex: 23.4 degree sign){option, shift, 8 = degree)
+
 """
 
 __author__ = ["Betzaida Alcaide", "Maribel Moreno"]
@@ -27,11 +36,16 @@ def draw_perpendicular_axis():
 
 
 def get_data():
+    """
+    Author: Betzaida Alcaide
+    This will show the tilt angle of the planets 3
+    """
     planet_data = {
         'mars': 25.2,
         'earth': 23.44,
-        'pluto':
+        'pluto': 122.5
     }
+
     return planet_data
 
 
