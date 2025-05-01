@@ -1,0 +1,29 @@
+Last login: Thu Apr 24 08:19:24 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+D134619975:Desktop alcai001$ git clone https://github.com/UW-ParksidePhysics/scientific-programming-betzaida
+fatal: destination path 'scientific-programming-betzaida' already exists and is not an empty directory.
+D134619975:Desktop alcai001$ nano calculate_pythagorean_triples.c
+
+
+
+
+
+
+
+D134619975:Desktop alcai001$ pwd
+/Users/alcai001/Desktop
+D134619975:Desktop alcai001$ cc calculate_pythagorean_triples.c
+D134619975:Desktop alcai001$ cc calculate_pythagorean_triples.c -lm
+D134619975:Desktop alcai001$ wc -l
+     
+cc calculate_pythagorean_triples.c -lm -o triples.x
+^[
+^[
+cc calculate_pythagorean_triples.c
+cc calculate_pathagorean_triples.c -lm
+w^C 
+D134619975:Desktop alcai001$ wc -l calculate_pythagorean_triples.c 
+      22 calculate_pythagorean_triples.c
+D134619975:Desktop alcai001$ 
