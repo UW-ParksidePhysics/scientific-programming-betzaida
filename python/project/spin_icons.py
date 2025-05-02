@@ -1,12 +1,20 @@
 """ My code is going to produce different spin icons based on the planets in the solar system
 feedback:
--make a 1.5x 1.5 in version and a 3 x 3 in version
--make a black and white version and color version
--dont include the rotational period
+-make a 1.5x 1.5 in version and a 3 x 3 in version (done)
+-make a black and white version and color version (done)
+--(create and optional parameter for draw planet icon, called used color. that is default to true but when false turns off, uses only gray and black)
+-don't include the rotational period
 -indicate the planets orbit and the perpendicular from which the planetary tilt is measured
+--{change planet orbit line to horizontal dashed line}
 -indicate the rotational direction using a curved arrow around the equator
 -mark the arc of swept out angle between perp the orbit and the pole, and label the angle there
 -include digits to the tenth of the degree (ex: 23.4 degree sign){option, shift, 8 = degree)
+--{use comments to identify what each block of code wants}
+--{Use AI to get the fancy arrow patch to draw the curved arrow around the rotational axis}
+--{Reduce angle to units place}
+--{Fix arc marking angle, and rotational axis, so it relies out beyond the circle}
+--{Make as simple as possible, avoid the yellow and angle thing, and fix angle label position to not have it be on top}
+--{NO yellow or red lines, remove any unused comments/codes}
 
 """
 
@@ -99,35 +107,3 @@ def run_all():
 
 if __name__ == '__main__':
     run_all()
-
-
-
-
-
-#### RENAME from spin_icons.py to (your_project_short_name).py
-# File structure
-# 1. Commented paragraph describing project ~ 100-200 words
-# 2. Module imports that are used in multiple functions
-# 3. Function definitions
-# 4. if __name__ == "__main__" block, which calls a primary function with a clear name 
-
-# All code is inside function definitions for simulation solution & visualization (functional programming)
-#	Each function contains a docstring compliant with PEP 257: https://www.python.org/dev/peps/pep-0257/
-#	Module ends with if __name__ == "__main__" block to execute central function of the code
-
-# Primary simulation function structure
-#	1. Module imports
-#		Use SciPy constants for physical constants in particular function (not globally)
-#			https://docs.scipy.org/doc/scipy/reference/constants.html
-#		Follow best practice order: 
-#			https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module
-# 	2. Simulation parameters
-#		Each parameter named clearly and units marked in in-line comment
-#		Naming of all variables should comply with PEP 8: 
-#			https://www.python.org/dev/peps/pep-0008/#documentation-strings
-#			(lower_case_with_underscores)
-# 	3. Computed parameters (from simulation parameters)
-# 	4. Function calls (use PEP 8-compliant lower_case_with_underscores) and simple calculations for:
-#		data read-in
-#		simulation solution 
-#		visualization
