@@ -8,7 +8,7 @@ remote: Total 244 (delta 95), reused 180 (delta 53), pack-reused 0 (from 0)
 Receiving objects: 100% (244/244), 382.55 KiB | 5.17 MiB/s, done.
 Resolving deltas: 100% (95/95), done.
 betzaidaalcaide@Betzys-MacBook-Air ~ % cd scientific-programming-betzaida
-betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.py
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.py 
 betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % python3 calculate_pythagorean_triples.py
    3   4   5
    5  12  13
@@ -64,4 +64,267 @@ betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./a.out
 betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc calculate_pythagorean_triples_args.c -lm -o triples.x
 betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./triples.x 5
    3   4   5
-betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida %
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.f90
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % f77 calculate_pythagorean_triples.f90
+zsh: command not found: f77
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % which gfortran
+gfortran not found
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+==> Checking for `sudo` access (which may request your password)...
+Password:
+==> This script will install:
+/opt/homebrew/bin/brew
+/opt/homebrew/share/doc/homebrew
+/opt/homebrew/share/man/man1/brew.1
+/opt/homebrew/share/zsh/site-functions/_brew
+/opt/homebrew/etc/bash_completion.d/brew
+/opt/homebrew
+==> The following new directories will be created:
+/opt/homebrew/bin
+/opt/homebrew/etc
+/opt/homebrew/include
+/opt/homebrew/lib
+/opt/homebrew/sbin
+/opt/homebrew/share
+/opt/homebrew/var
+/opt/homebrew/opt
+/opt/homebrew/share/zsh
+/opt/homebrew/share/zsh/site-functions
+/opt/homebrew/var/homebrew
+/opt/homebrew/var/homebrew/linked
+/opt/homebrew/Cellar
+/opt/homebrew/Caskroom
+/opt/homebrew/Frameworks
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/bin/install -d -o root -g wheel -m 0755 /opt/homebrew
+==> /usr/bin/sudo /bin/mkdir -p /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod ug=rwx /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod go-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions
+==> /usr/bin/sudo /usr/sbin/chown betzaidaalcaide /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/bin/chgrp admin /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/sbin/chown -R betzaidaalcaide:admin /opt/homebrew
+==> /usr/bin/sudo /bin/mkdir -p /Users/betzaidaalcaide/Library/Caches/Homebrew
+==> /usr/bin/sudo /bin/chmod g+rwx /Users/betzaidaalcaide/Library/Caches/Homebrew
+==> /usr/bin/sudo /usr/sbin/chown -R betzaidaalcaide /Users/betzaidaalcaide/Library/Caches/Homebrew
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 300753, done.
+remote: Counting objects: 100% (89/89), done.
+remote: Compressing objects: 100% (70/70), done.
+remote: Total 300753 (delta 27), reused 67 (delta 16), pack-reused 300664 (from 2)
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Total 55 (delta 33), reused 33 (delta 33), pack-reused 22 (from 1)
+==> Updating Homebrew...
+==> Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:40e7f5d7514a7e9757facdd39006f7a351d3d7986d3a228be13c8b1c3216727b
+########################################################################################################################## 100.0%
+==> Pouring portable-ruby-3.4.3.arm64_big_sur.bottle.tar.gz
+Warning: /opt/homebrew/bin is not in your PATH.
+  Instructions on how to configure your shell for Homebrew
+  can be found in the 'Next steps' section below.
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run these commands in your terminal to add Homebrew to your PATH:
+    echo >> /Users/betzaidaalcaide/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/betzaidaalcaide/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % brew install gcc
+zsh: command not found: brew
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % which gfortran
+gfortran not found
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % echo >> /Users/betzaidaalcaide/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/betzaidaalcaide/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % brew install gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/14.2.0_1-2
+########################################################################################################################## 100.0%
+==> Fetching dependencies for gcc: gmp, isl, mpfr, libmpc, lz4, xz and zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+########################################################################################################################## 100.0%
+==> Fetching gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:6683d73d6677d28e1e8d1b92d6ebfbc068c1d33e19b79114a22a648a99ba599
+########################################################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.27
+########################################################################################################################## 100.0%
+==> Fetching isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/blobs/sha256:de143fddb0e20b6b73016ead1e625ebd429db53918200d093e4da98f1e75888
+########################################################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.2
+########################################################################################################################## 100.0%
+==> Fetching mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/blobs/sha256:ed822b7e77645d7c17abb3ee9cc2b2a82a4d0f003acc7615b5df6226031479
+########################################################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+########################################################################################################################## 100.0%
+==> Fetching libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/blobs/sha256:5c8cdc4d460525025f69157ea5187c4119da8bffab33e7923dc374c011c9
+########################################################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.10.0-1
+########################################################################################################################## 100.0%
+==> Fetching lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:5bd143b7b784989e549637ea4e484af85ba481e640dde69bc35f3843ae25abc
+########################################################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.8.1
+########################################################################################################################## 100.0%
+==> Fetching xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:dcd7823f2624cbcd08f55c232097a79300c7d76ab5969004db1a4785c6c0cd87
+########################################################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+########################################################################################################################## 100.0%
+==> Fetching zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:b039c851ef22617804576274872c33727ebb3a0b5e0db2ab62e0d8a97ec960
+########################################################################################################################## 100.0%
+==> Fetching gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:b3756b97898275550311155f8b2fe8e6918d420565887e04c009edd5c39899a
+########################################################################################################################## 100.0%
+==> Installing dependencies for gcc: gmp, isl, mpfr, libmpc, lz4, xz and zstd
+==> Installing gcc dependency: gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+Already downloaded: /Users/betzaidaalcaide/Library/Caches/Homebrew/downloads/70a72a71216843d66a953c06ff6337445ce9bc94fae9f0e301e2f59005274a8e--gmp-6.3.0.bottle_manifest.json
+==> Pouring gmp--6.3.0.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/gmp/6.3.0: 22 files, 3.3MB
+==> Installing gcc dependency: isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.27
+Already downloaded: /Users/betzaidaalcaide/Library/Caches/Homebrew/downloads/40b1c5526f95db33208143fa79887179e758121659d8877597f553e6e6188879--isl-0.27.bottle_manifest.json
+==> Pouring isl--0.27.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/isl/0.27: 74 files, 7.6MB
+==> Installing gcc dependency: mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.2
+Already downloaded: /Users/betzaidaalcaide/Library/Caches/Homebrew/downloads/991b389ea6f1daa5dc48fd5250bcc5b85e827eb18b8ad4acd89419f2ace47d88--mpfr-4.2.2.bottle_manifest.json
+==> Pouring mpfr--4.2.2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/mpfr/4.2.2: 31 files, 3.1MB
+==> Installing gcc dependency: libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+Already downloaded: /Users/betzaidaalcaide/Library/Caches/Homebrew/downloads/fdfa98e0f8bb3ce075cb32776ac2345aa2f89252706c162aecfc841085fa76be--libmpc-1.3.1.bottle_manifest.json
+==> Pouring libmpc--1.3.1.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libmpc/1.3.1: 13 files, 492.3KB
+==> Installing gcc dependency: lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.10.0-1
+Already downloaded: /Users/betzaidaalcaide/Library/Caches/Homebrew/downloads/8e11e90eb21a06e0f199af9d80e011e3693c77dd353b2477579d95c8471a5802--lz4-1.10.0-1.bottle_manifest.json
+==> Pouring lz4--1.10.0.arm64_sequoia.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/lz4/1.10.0: 24 files, 713.5KB
+==> Installing gcc dependency: xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.8.1
+Already downloaded: /Users/betzaidaalcaide/Library/Caches/Homebrew/downloads/86a115cc1d43ff8a480fd907f812e70a403e1675d8a7223f61bbb08cbd2adc27--xz-5.8.1.bottle_manifest.json
+==> Pouring xz--5.8.1.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/xz/5.8.1: 96 files, 2.5MB
+==> Installing gcc dependency: zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+Already downloaded: /Users/betzaidaalcaide/Library/Caches/Homebrew/downloads/596a67b1677f62a8e24e6fdfa7c879891221cb8261242f4355fb4deff1a2ec39--zstd-1.5.7.bottle_manifest.json
+==> Pouring zstd--1.5.7.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/zstd/1.5.7: 32 files, 2.2MB
+==> Installing gcc
+==> Pouring gcc--14.2.0_1.arm64_sequoia.bottle.2.tar.gz
+🍺  /opt/homebrew/Cellar/gcc/14.2.0_1: 1,914 files, 459.8MB
+==> Running `brew cleanup gcc`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % which gfortran
+/opt/homebrew/bin/gfortran
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % gfortran calculate_pythagorean_triples.f90 -o triples_f90.x
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./triples_f90.x
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano hypotenuse.f90
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % gfortran -c hypotenuse.f90
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.f90
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % gfortran -c calculate_pythagorean_triples.f90
+calculate_pythagorean_triples.f90:19:15:
+
+   19 |             endif
+      |               1
+Error: Expecting END DO statement at (1)
+calculate_pythagorean_triples.f90:16:61:
+
+   16 |             if ( c <=maximum_c .and. (c - floor(c) < epsilson)) then
+      |                                                             1
+Error: Symbol 'epsilson' at (1) has no IMPLICIT type; did you mean 'epsilon'?
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.f90
+
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % gfortran -c calculate_pythagorean_triples.f90
+calculate_pythagorean_triples.f90:19:15:
+
+   19 |             endif
+      |               1
+Error: Expecting END DO statement at (1)
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.f90
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % gfortran -c calculate_pythagorean_triples.f90
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % gfortran -o triples_c.x calculate_pythagorean_triples.o hypotenuse.o
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./triples_c.x
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  14  48  50
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+  30  40  50
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano hypotenuse.c
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc -c hypotenuse.c
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.c
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc -c calculate_pythagorean_triples.c
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc -o triples_c.x calculate_pythagorean_triples.o hypotenuse.o -lm
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./triples_c.x
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  14  48  50
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+  30  40  50
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % 
