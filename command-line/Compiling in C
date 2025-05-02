@@ -1,29 +1,67 @@
-Last login: Thu Apr 24 08:19:24 on ttys000
-
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-D134619975:Desktop alcai001$ git clone https://github.com/UW-ParksidePhysics/scientific-programming-betzaida
-fatal: destination path 'scientific-programming-betzaida' already exists and is not an empty directory.
-D134619975:Desktop alcai001$ nano calculate_pythagorean_triples.c
-
-
-
-
-
-
-
-D134619975:Desktop alcai001$ pwd
-/Users/alcai001/Desktop
-D134619975:Desktop alcai001$ cc calculate_pythagorean_triples.c
-D134619975:Desktop alcai001$ cc calculate_pythagorean_triples.c -lm
-D134619975:Desktop alcai001$ wc -l
-     
-cc calculate_pythagorean_triples.c -lm -o triples.x
-^[
-^[
-cc calculate_pythagorean_triples.c
-cc calculate_pathagorean_triples.c -lm
-w^C 
-D134619975:Desktop alcai001$ wc -l calculate_pythagorean_triples.c 
-      22 calculate_pythagorean_triples.c
-D134619975:Desktop alcai001$ 
+Last login: Fri May  2 17:10:49 on ttys000
+betzaidaalcaide@Betzys-MacBook-Air ~ % git clone https://github.com/UW-ParksidePhysics/scientific-programming-betzaida
+Cloning into 'scientific-programming-betzaida'...
+remote: Enumerating objects: 244, done.
+remote: Counting objects: 100% (244/244), done.
+remote: Compressing objects: 100% (172/172), done.
+remote: Total 244 (delta 95), reused 180 (delta 53), pack-reused 0 (from 0)
+Receiving objects: 100% (244/244), 382.55 KiB | 5.17 MiB/s, done.
+Resolving deltas: 100% (95/95), done.
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd scientific-programming-betzaida
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.py
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % python3 calculate_pythagorean_triples.py
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  14  48  50
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+  30  40  50
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc calculate_pythagorean_triples.c -lm
+clang: error: no such file or directory: 'calculate_pythagorean_triples.c'
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_tripples.c
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc calculate_pythagorean_triples.c
+clang: error: no such file or directory: 'calculate_pythagorean_triples.c'
+clang: error: no input files
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc calculate_pythagorean_triples.c -lm
+clang: error: no such file or directory: 'calculate_pythagorean_triples.c'
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % nano calculate_pythagorean_triples.c
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc calculate_pythagorean_triples.c -lm
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./a.out
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  14  48  50
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+  30  40  50
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cc calculate_pythagorean_triples_args.c -lm -o triples.x
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./triples.x 5
+   3   4   5
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida %
