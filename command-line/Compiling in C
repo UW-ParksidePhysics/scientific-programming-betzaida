@@ -327,4 +327,43 @@ betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % ./triples_c
   24  32  40
   27  36  45
   30  40  50
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % cd ~/scientific-programming-betzaida
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	a.out
+	calculate_pythagorean_triples.c
+	calculate_pythagorean_triples.f90
+	calculate_pythagorean_triples.o
+	calculate_pythagorean_triples.py
+	calculate_pythagorean_triples_args.c
+	calculate_pythagorean_tripples.c
+	hypotenuse.c
+	hypotenuse.f90
+	hypotenuse.o
+	triples.x
+	triples_c.x
+	triples_f90.x
+
+nothing added to commit but untracked files present (use "git add" to track)
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % git add calculate_pythagorean_triples.c calculate_pythagorean_triples.f90 hypotenuse.c hypotenuse.f90 triples.x triples_f90.x triples_c.x
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % git commit -m "Completed compiling exercises in C and Fortran"                                    
+[main 743626b] Completed compiling exercises in C and Fortran
+ 7 files changed, 67 insertions(+)
+ create mode 100644 calculate_pythagorean_triples.c
+ create mode 100644 calculate_pythagorean_triples.f90
+ create mode 100644 hypotenuse.c
+ create mode 100644 hypotenuse.f90
+ create mode 100755 triples.x
+ create mode 100755 triples_c.x
+ create mode 100755 triples_f90.x
+betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % git push
+Username for 'https://github.com': betzaida
+Password for 'https://betzaida@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/UW-ParksidePhysics/scientific-programming-betzaida/'
 betzaidaalcaide@Betzys-MacBook-Air scientific-programming-betzaida % 
