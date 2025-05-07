@@ -1,19 +1,28 @@
 import vpython as vp
 
-initial_position = vp.vector(-1., 0., 0.)
-initial_velocity = vp.vector(1., 0., 0.)
-ball = vp.sphere(pos=initial_position, radius=0.1, color=vp.color.red, make_trail=True)
+# Ball 1
+pos1 = vp.vector(-2, -1, -2)
+vel1 = vp.vector(1, 0.5, 1)
+ball1 = vp.sphere(pos=pos1, radius=0.1, color=vp.color.red, make_trail=True)
 
-animation_time_step = 0.1  # seconds
-rate_of_animation = 1/animation_time_step
+# Ball 2
+pos2 = vp.vector(2, 1, 2)
+vel2 = vp.vector(-1, -0.3, -1)
+ball2 = vp.sphere(pos=pos2, radius=0.1, color=vp.color.blue, make_trail=True)
+
+# Timing
+animation_time_step = 0.1
+rate_of_animation = 1 / animation_time_step
 time_step = 0.05
-stop_time = 10.
+stop_time = 10.0
 
-time = 0.
+# Animation loop
+time = 0.0
 while time < stop_time:
     vp.rate(rate_of_animation)
-    x = initial_position.x + initial_velocity.x * time
-    y = initial_position.y + initial_velocity.y * time
-    z = initial_position.z + initial_velocity.z * time
-    ball.pos = vp.vector(x, y, z)
+
+    # Update positions using uniform motion formula: x = x0 + v * t
+    ball1.pos = pos1 + vel1 * time
+    ball2.pos = pos2 + vel2 * time
+
     time += time_step
