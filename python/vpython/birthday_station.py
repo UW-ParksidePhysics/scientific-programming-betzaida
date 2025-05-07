@@ -21,7 +21,8 @@ pause = False
 rotation = 0
 drag = False
 
-class spacestation:
+class Spacestation:
+    """ Class representing the rotating space station and the components """
     def __init__(self, whichcanvas):
         self.N = 50 # number of boxes used to create the ring-shaped space station
         self.R = 10 # inner radius of space station
@@ -33,7 +34,6 @@ class spacestation:
         
         thick = 0.5 # thickness of space station
         dtheta = 2 * pi / self.N
-        paint = color.red
         red = True
         boxes = [self.person]
         
@@ -41,19 +41,15 @@ class spacestation:
             theta = i * dtheta
             b = box(pos=(self.R + thick / 2) * vector(cos(theta), sin(theta), 0),
                     size=vector(thick, 2 * (self.R + thick) * sin(dtheta / 2), thick))
-            if red:
-              b.color = color.red
-              red = False
-            else:
-              b.color = color.blue
-              red = True
+            b.color = color.orange if red else color.cyan
+            red = not red
             b.rotate(angle=theta, axis=vector(0, 0, 1))
             boxes.append(b)
         
         self.hull = compound(boxes)
         
         self.ball = sphere(pos=self.person.pos + self.person.axis,
-                    color=color.cyan, size=2 * 0.2 * vector(1, 1, 1))
+                    color=color.magenta, size=2 * 0.2 * vector(1, 1, 1))
         
         self.trail = attach_trail(self.ball, radius=0.1 * self.ball.size.x, pps=10, retain=500)
         self.reset()
@@ -84,6 +80,7 @@ def bind_mouse(station, vector1, vector2):
 
         set_v()
         drag = True
+
         def move():
           global drag, pause
           if pause: return
@@ -107,8 +104,7 @@ def bind_mouse(station, vector1, vector2):
             
         s.bind("mousemove", move)
         s.bind("mouseup", up)
-            
-    s.bind("mousedown", down)
+        s.bind("mousedown", down)
 
 scene1 = canvas(width=430, height=400, align='left', userspin=False, userzoom=False)
 scene2 = canvas(width=430, height=400, align='left', userspin=False, userzoom=False)
@@ -116,10 +112,17 @@ scene2 = canvas(width=430, height=400, align='left', userspin=False, userzoom=Fa
 scene1.title = """ROTATING SPACE STATION
 Inertial frame on the left, rotating frame on the right."""
 
-station1 = spacestation(scene1)
-station2 = spacestation(scene2)
+station1 = Spacestation(scene1)
+station2 = Spacestation(scene2)
 scene1.autoscale = scene2.autoscale = False
-omega = 1  # angular speed of space station; period of rotation is 2*pi/omega
+
+#Computing omega using birthdays
+my_birthdate = 6
+partner_birthdate = 18
+rotation_days = my_birthdate * partner_birthdate
+omega = 2 * pi / rotation_days
+
+# Other constants
 deltat = 0.001 * 2 * pi / omega
 v0 = omega * (station1.R - station1.h)
 scalefactor = 5 / (omega * station1.R)
