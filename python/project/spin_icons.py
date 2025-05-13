@@ -1,109 +1,179 @@
-""" My code is going to produce different spin icons based on the planets in the solar system
-feedback:
--make a 1.5x 1.5 in version and a 3 x 3 in version (done)
--make a black and white version and color version (done)
---(create and optional parameter for draw planet icon, called used color. that is default to true but when false turns off, uses only gray and black)
--don't include the rotational period
--indicate the planets orbit and the perpendicular from which the planetary tilt is measured
---{change planet orbit line to horizontal dashed line}
--indicate the rotational direction using a curved arrow around the equator
--mark the arc of swept out angle between perp the orbit and the pole, and label the angle there
--include digits to the tenth of the degree (ex: 23.4 degree sign){option, shift, 8 = degree)
---{use comments to identify what each block of code wants}
---{Use AI to get the fancy arrow patch to draw the curved arrow around the rotational axis}
---{Reduce angle to units place}
---{Fix arc marking angle, and rotational axis, so it relies out beyond the circle}
---{Make as simple as possible, avoid the yellow and angle thing, and fix angle label position to not have it be on top}
---{NO yellow or red lines, remove any unused comments/codes}
-
 """
+spin_icons.py
 
-__author__ = ["Betzaida Alcaide", "Maribel Moreno"]
+Final exam project script that visualizes planetary axial tilt, computes statistics,
+fits a quadratic model to tilt data, and solves a characteristic matrix equation.
+
+__author__ = "Betzaida Alcaide", "Maribel Moreno"
+Date: May 12
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-# Extended planetary data including orbit and angular velocity
-planet_data = {
-    'mars': {'tilt': 25.2, 'a': 227.9e6, 'b': 227.9e6, 'omega': 360 / 24.6},
-    'earth': {'tilt': 23.4, 'a': 149.6e6, 'b': 149.6e6, 'omega': 360 / 24.0},
-    'pluto': {'tilt': 122.5, 'a': 5906.4e6, 'b': 5906.4e6, 'omega': 360 / 153.0},
-}
+from matplotlib.patches import FancyArrowPatch
+from scipy.stats import describe
+from numpy.polynomial.polynomial import polyfit
+from datetime import datetime
 
 
 def get_data():
+    """
+    __author__ = "Betzaida Alcaide"
+    Gives me the planet names and their tilt angles
+    """
+    planet_data = {
+        'mercury': {'tilt': 0.03},
+        'venus': {'tilt': 177.4},
+        'earth': {'tilt': 23.4},
+        'mars': {'tilt': 25.2},
+        'jupiter': {'tilt': 3.1},
+        'saturn': {'tilt': 26.7},
+        'uranus': {'tilt': 97.8},
+        'neptune': {'tilt': 28.3},
+    }
     return planet_data
 
 
-def draw_planet_icon(planet_name, planet_info, color=True, size=(3, 3), save_path=None, time=0):
+def compute_tilt_statistics(planet_data):
+    """
+    ___author__ = "Maribel Moreno"
+    Finds the average, max, min, and other stats from the tilt data
+    """
+    tilt_values = [info['tilt'] for info in planet_data.values()]
+    return describe(tilt_values)
+
+
+def fit_tilt_curve(planet_data):
+    """
+    ___author__ = "Betzaida Alcaide", "Maribel Moreno"
+    Fits a curve to the tilt data using a quadratic equation
+    """
+    tilts = [info['tilt'] for info in planet_data.values()]
+    indices = np.arange(len(tilts))
+    coeffs = polyfit(indices, tilts, deg=2)
+    return coeffs, indices, tilts
+
+
+def draw_planet_icon(planet_name, planet_info, color=True, size=(1.5, 1.5), save_path=None):
+    """
+    ___author__ = "Betzaida Alcaide", "Maribel Moreno"
+    Draws a planet, its orbit, and an arrow showing the tilt
+    """
     fig, ax = plt.subplots(figsize=size)
     ax.set_aspect('equal')
     ax.axis('off')
 
-    # Unpack parameters
-    tilt_angle = planet_info['tilt'] + planet_info['omega'] * time
+    tilt_angle = planet_info['tilt']
     angle_rad = np.radians(tilt_angle)
     radius = 1.0
     orbit_radius = 2.5
 
-    # Colors
-    planet_color = 'gray' if not color else {'earth': 'blue', 'mars': 'red', 'pluto': 'brown'}.get(planet_name, 'gray')
+    planet_color = {
+        'mercury': 'darkgray', 'venus': 'gold', 'earth': 'blue', 'mars': 'red',
+        'jupiter': 'orange', 'saturn': 'goldenrod', 'uranus': 'lightblue', 'neptune': 'darkblue'
+    }.get(planet_name, 'gray')
 
-    # Draw orbit ellipse
-    orbit = plt.Circle((0, 0), orbit_radius, fill=False, color='gray', linestyle='--', lw=0.5)
+    orbit = plt.Circle((0, 0), orbit_radius, fill=False, linestyle='--', edgecolor='gray', lw=0.5)
     ax.add_patch(orbit)
 
-    # Draw planet
-    circle = plt.Circle((0, 0), radius, color=planet_color, ec='black', zorder=2)
-    ax.add_patch(circle)
+    planet = plt.Circle((0, 0), radius, color=planet_color, ec='black', zorder=2)
+    ax.add_patch(planet)
 
-    # Equator
-    ax.plot([-radius, radius], [0, 0], color='black', lw=1.2, zorder=3)
-
-    # Perpendicular axis (from orbit)
-    ax.plot([0, 0], [-1.5 * radius, 1.5 * radius], color='black', lw=1.0, linestyle='--', zorder=1)
-
-    # Tilt axis
+    # This arrow shows the direction of the tilt
     x_tilt = radius * np.sin(angle_rad)
     y_tilt = radius * np.cos(angle_rad)
-    ax.plot([0, x_tilt], [0, y_tilt], color='yellow' if color else 'black', lw=2.0, zorder=4)
+    arrow = FancyArrowPatch(posA=(0, 0), posB=(x_tilt, y_tilt),
+                            arrowstyle='->', color='yellow', lw=2.0,
+                            mutation_scale=15)
+    ax.add_patch(arrow)
 
-    # Arc for tilt angle
+    # This arc shows the size of the tilt angle
     arc_radius = 0.5
-    arc_angles = np.linspace(0, angle_rad, 50)
+    arc_angles = np.linspace(0, angle_rad, num=50)
     arc_x = arc_radius * np.sin(arc_angles)
     arc_y = arc_radius * np.cos(arc_angles)
     ax.plot(arc_x, arc_y, color='black', lw=1.0)
 
-    # Angle label
+    # This label adds the tilt value on the arc
     label_x = arc_radius * np.sin(angle_rad / 2)
     label_y = arc_radius * np.cos(angle_rad / 2)
     ax.text(label_x, label_y, f"{tilt_angle:.1f}°", fontsize=8, ha='left', va='bottom')
 
-    # Rotation arrow along equator (semicircular above planet)
-    theta = np.linspace(-np.pi / 2, np.pi / 2, 100)
-    r = radius
-    arrow_x = r * np.cos(theta)
-    arrow_y = 0.15 * radius * np.sin(theta)  # slight vertical offset to appear above the equator
-    ax.plot(arrow_x, arrow_y, color='black', lw=1.0)
-    ax.annotate('', xy=(arrow_x[-1], arrow_y[-1]), xytext=(arrow_x[-2], arrow_y[-2]),
-                arrowprops=dict(arrowstyle="->", lw=1.0))
+    # Adds the date to the bottom of the image
+    timestamp = datetime.now().strftime("Created on %Y-%m-%d")
+    ax.text(-2.4, -2.6, timestamp, fontsize=6, ha='left')
 
-    # Label
-    ax.set_title(planet_name.capitalize(), fontsize=10)
+    ax.set_title(f"{planet_name.capitalize()}\n{tilt_angle:.1f}°", fontsize=10)
 
     if save_path:
         plt.savefig(save_path, bbox_inches='tight', dpi=300)
     plt.close()
 
+def matrix_demo():
+    """
+    ___author__ = "Maribel Moreno"
+    Builds a 10x10 matrix like in the matrix assignment, solves for eigenvalues and eigenvectors, and prints the results
+    """
+    matrix_dimension = 10
+    n = matrix_dimension
 
-def run_all():
+    main_diag = 2 * np.ones(n)
+    off_diag = -1 * np.ones(n - 1)
+
+    H = np.diag(main_diag) + np.diag(off_diag, k=1) + np.diag(off_diag, k=-1)
+    scaling_factor = 1 / (2 * (1 / (n + 1)) ** 2)
+    H = scaling_factor * H
+
+    eigenvalues, eigenvectors = np.linalg.eig(H)
+
+    # Sorts them
+    i_sorted = np.argsort(eigenvalues)
+    eigenvalues = eigenvalues[i_sorted]
+    eigenvectors = eigenvectors[:, i_sorted]
+
+    print("\nEigenvalues (lowest to highest):\n", eigenvalues)
+    print("\nEigenvectors (each column matches eigenvalue above):\n", eigenvectors)
+
+    return eigenvalues, eigenvectors
+
+
+
+def main():
     data = get_data()
+    """
+    __author__ = "Betzaida Alcaide"
+    """
+    # Shows tilt stats in the terminal
+    stats = compute_tilt_statistics(data)
+    print("\nTilt Statistics:", stats)
+
+    # Fit a curve to the tilts
+    coeffs, x_vals, y_vals = fit_tilt_curve(data)
+    fit_x = np.linspace(0, len(x_vals) - 1, 100)
+    fit_y = sum(c * fit_x**i for i, c in enumerate(coeffs))
+
+    # Make the plot with data and fit curve
+    plt.figure()
+    plt.plot(x_vals, y_vals, 'o', label='Data')
+    plt.plot(fit_x, fit_y, '-', label='Quadratic Fit')
+    plt.title('Axial Tilt Fit')
+    plt.xlabel('Planet Index')
+    plt.ylabel('Tilt (°)')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig("tilt_fit_plot.png")
+    plt.close()
+
+    # Make planet pictures
     for planet, info in data.items():
-        for size in [(3, 3), (1.5, 1.5)]:
-            draw_planet_icon(planet, info, color=True, size=size, save_path=f"{planet}_color_{size[0]}x{size[1]}.png")
-            draw_planet_icon(planet, info, color=False, size=size, save_path=f"{planet}_bw_{size[0]}x{size[1]}.png")
+        draw_planet_icon(planet, info, save_path=f"{planet}_tilt.png")
+
+    # Show matrix answers in the terminal
+    eigenvalues, eigenvectors = matrix_demo()
+    print("\nEigenvalues:\n", eigenvalues)
+    print("\nEigenvectors:\n", eigenvectors)
 
 
-if __name__ == '__main__':
-    run_all()
+if __name__ == "__main__":
+    main()
