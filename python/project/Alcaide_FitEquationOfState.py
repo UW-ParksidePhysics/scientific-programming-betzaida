@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date
 
+display_graph = True
 
 def parse_file_name(filename):
     parts = filename.split(".")
@@ -85,8 +86,10 @@ def plot_equation_of_state(data, fit_curve, coeffs, symbol, symmetry, method):
     plt.text(x_data[0], min(y_data)-0.005, f"Created by Betzaida Alcaide ({today})", fontsize=8)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Alcaide_Equation_of_State_TestPlot.png", dpi=300)
-    plt.show()
+    if display_graph:
+        plt.show()
+    else:
+        plt.savefig("Alcaide_Equation_of_State_TestPlot.png", dpi=300)
 
 
 if __name__ == "__main__":
